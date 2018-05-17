@@ -12,6 +12,7 @@ import UIKit
  1. Add BusinessChat framework
  2. Get your account business id
  3. Create button with a target action
+ 4. Add Group and Intent params.
  */
 import BusinessChat
 
