@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         //Making sure we running @min. OS requirements:
         if #available(iOS 11.3, *) {
-            createABCButton(style:.light,
+            createABCButton(style:.dark,
                             frame: CGRect(x: (self.view.frame.size.width/2)-(abcButtonSize.width/2),
                                           y: (self.view.frame.size.height/2)-(abcButtonSize.height/2),
                                           width: abcButtonSize.width,
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         view.addSubview(abcButton)
     }
     
-    @objc func buttonTapped(chatButton: BCChatButton) {
+    @objc private func buttonTapped(chatButton: BCChatButton) {
         if #available(iOS 11.3, *) {
             let parameters: [BCChatAction.Parameter : String] = [
                 .intent: "<DESIRED_INTENT_HERE>",
