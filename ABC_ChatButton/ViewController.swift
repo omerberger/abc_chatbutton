@@ -25,7 +25,11 @@ class ViewController: UIViewController {
         
         //Making sure we running @min. OS requirements:
         if #available(iOS 11.3, *) {
-            createABCButton(style:.light, frame: CGRect.zero)
+            createABCButton(style:.light,
+                            frame: CGRect(x: (self.view.frame.size.width/2)-90,
+                                          y: (self.view.frame.size.height/2)-30,
+                                          width: 180,
+                                          height: 60))
         }else{
             //Fallback condition here
         }
@@ -39,13 +43,15 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonTapped(chatButton: BCChatButton) {
-        let parameters: [BCChatAction.Parameter : String] = [
-            .intent: "<DESIRED_INTENT_HERE>",
-            .group: "<DESIRED_GROUP_HERE>",
-            .body: "<DESIRED_BODY_HERE>"
-        ]
-        
-        BCChatAction.openTranscript(businessIdentifier: bid, intentParameters: parameters)
+        if #available(iOS 11.3, *) {
+            let parameters: [BCChatAction.Parameter : String] = [
+                .intent: "<DESIRED_INTENT_HERE>",
+                .group: "<DESIRED_GROUP_HERE>",
+                .body: "<DESIRED_BODY_HERE>"
+            ]
+            
+            BCChatAction.openTranscript(businessIdentifier: bid, intentParameters: parameters)
+        }
     }
     
 }
