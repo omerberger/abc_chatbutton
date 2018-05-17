@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: Adding ABCBUtton:
+    //MARK: Adding ABCButton:
     
     private func createABCButton(style: BCChatButton.Style, frame: CGRect) {
         let abcButton   =  BCChatButton(style: style)
