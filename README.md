@@ -1,2 +1,2 @@
 # abc_chatbutton
-This project implements ading an ABC button for initiating conversation.
+This Xcode project implements ading an ABC chat button for initiating ABC conversation.
