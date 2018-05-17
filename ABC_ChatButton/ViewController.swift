@@ -20,16 +20,19 @@ let bid = "<ADD_YOUT_BUSINESS_ID_HERE>"
 
 class ViewController: UIViewController {
     
+    
+    let abcButtonSize = CGSize(width: 180, height: 60)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Making sure we running @min. OS requirements:
         if #available(iOS 11.3, *) {
             createABCButton(style:.light,
-                            frame: CGRect(x: (self.view.frame.size.width/2)-90,
-                                          y: (self.view.frame.size.height/2)-30,
-                                          width: 180,
-                                          height: 60))
+                            frame: CGRect(x: (self.view.frame.size.width/2)-(abcButtonSize.width/2),
+                                          y: (self.view.frame.size.height/2)-(abcButtonSize.height/2),
+                                          width: abcButtonSize.width,
+                                          height: abcButtonSize.height))
         }else{
             //Fallback condition here
         }
